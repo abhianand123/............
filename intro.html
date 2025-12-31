@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="website icon" type="png" href="image/cat.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="intro.css">
-    <title>Happy New Year 2023</title>
+    <title>Happy New Year 2026</title>
 </head>
+
 <body>
     <div class="box-slider">
         <div class="slider1">
@@ -31,7 +35,7 @@
             </div>
             <div class="box-button">
                 <div class="button">
-                    <button>Ấn vào đây nè!</button>
+                    <button>Click here!</button>
                     <span><i class="fa-solid fa-heart"></i></span>
                 </div>
             </div>
@@ -116,7 +120,7 @@
                         <span>2</span>
                     </div>
                     <div class="number">
-                        <span>3</span>
+                        <span>6</span>
                     </div>
                 </div>
             </div>
@@ -161,7 +165,7 @@
             <div class="rhombus"></div>
             <div class="rhombus"></div>
             <div class="rhombus-img">
-                <img id="img-cua-em" src="https://mimosawedding.net/wp-content/uploads/2020/03/hoc-chup-anh-o-dau-ha-noi-3.jpg" alt="">
+                <img id="img-cua-em" src="image/teacher_wish.png" alt="">
             </div>
             <div class="mail">
                 <button><i class="fa-regular fa-envelope"></i></button>
@@ -194,7 +198,7 @@
                             <div class="text-content">
                                 <h2>Happy New</h2>
                                 <h1>Year</h1>
-                                <span>2023</span>
+                                <span>2026</span>
                             </div>
                         </div>
                     </div>
@@ -210,13 +214,14 @@
                 <div class="right">
                     <div class="content">
                         <div class="title">
-                            <h1 id="name-cua-em">&#129505Gửi em !</h1>
+                            <h1 id="name-cua-em">&#129505Dear Teacher!</h1>
                         </div>
                         <p id="message-content">
-                            Chúc em luôn vui vẻ, hạnh phúc, thành công trong công việc và cuộc sống.
+                            Wishing you a Happy New Year filled with joy, peace, and prosperity. Thank you for being
+                            such an inspiring teacher!
                         </p>
                         <div class="fixedContent">
-                            <h3>Người gửi: Bé Công</h3>
+                            <h3>From: Your Student</h3>
                         </div>
                     </div>
                 </div>
@@ -226,29 +231,30 @@
     </div>
 
     <audio id="song">
-        <source src="image/nhac.mp3" type="audio/mp3">
+        <source src="image/bgm.mp3" type="audio/mp3">
     </audio>
 
-<script src="./data.js"></script>
+    <script src="./data.js"></script>
 
-<script>
-    // get request GET name
-    var urlParams = new URLSearchParams(window.location.search);
-    var name = urlParams.get('name');
-    // search name in data_name
-    if (name != null) {
-        for (var i = 0; i < data_name.length; i++) {
-            if (name == data_name[i].name) {
-                document.getElementById("name-cua-em").innerHTML = data_name[i].name;
-                document.getElementById("img-cua-em").src = data_name[i].img;
-                document.getElementById("message-content").innerHTML = data_name[i].message;
-                break;
+    <script>
+        // get request GET name
+        var urlParams = new URLSearchParams(window.location.search);
+        var name = urlParams.get('name');
+        // search name in data_name
+        if (name != null) {
+            for (var i = 0; i < data_name.length; i++) {
+                if (name == data_name[i].name) {
+                    document.getElementById("name-cua-em").innerHTML = data_name[i].name;
+                    document.getElementById("img-cua-em").src = data_name[i].img;
+                    document.getElementById("message-content").innerHTML = data_name[i].message;
+                    break;
+                }
             }
         }
-    }
 
 
-</script>
-<script src="./intro.js"></script>
+    </script>
+    <script src="./intro.js"></script>
 </body>
+
 </html>

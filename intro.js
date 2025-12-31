@@ -1,5 +1,5 @@
 var buttonActive = document.querySelector('.button button')
-buttonActive.onclick = function(){
+buttonActive.onclick = function () {
     var boxFlower = document.querySelector('.flower-img:nth-child(1)')
     var boxFlower2 = document.querySelector('.flower-img:nth-child(2)')
     var boxFlower3 = document.querySelector('.flower-img:nth-child(3)')
@@ -33,13 +33,40 @@ buttonActive.onclick = function(){
     mailActive.classList.toggle("active")
 }
 
-var mail = document.querySelector(".mail")
+var mailButton = document.querySelector(".mail button")
+var heartButton = document.querySelector(".mail .heart")
 var slider3 = document.querySelector(".slider3")
 var closeSlider3 = document.querySelector(".fa-xmark")
-mail.onclick = function(){
+
+// Function to update content
+function showMessage(title, message, sender) {
+    document.getElementById("name-cua-em").innerHTML = "&#129505 " + title;
+    document.getElementById("message-content").innerHTML = message;
+    // Update sender info - assuming the h3 is the last element in fixedContent or selecting by text if no ID
+    // Since original didn't have ID for sender, let's use the structure
+    var senderEl = document.querySelector(".fixedContent h3");
+    if (senderEl) senderEl.innerHTML = sender;
+
     slider3.classList.add("active")
 }
-closeSlider3.addEventListener('click', function(){
+
+mailButton.onclick = function () {
+    showMessage(
+        "Thank You!",
+        "As we step into 2026, I want to take a moment to express my deepest gratitude. Your guidance and wisdom have shaped me in ways words cannot fully capture. Thank you for being a light in my life.",
+        "From: Abhi Anand"
+    )
+}
+
+heartButton.onclick = function () {
+    showMessage(
+        "You're the Best!",
+        "You are not just a teacher but a true inspiration. Your kindness, patience, and dedication make learning a joy. Wishing you a year as wonderful and radiant as you are!",
+        "With Deepest Gratitude, Abhi Anand"
+    )
+}
+
+closeSlider3.addEventListener('click', function () {
     slider3.classList.remove('active')
 })
 
@@ -47,8 +74,8 @@ closeSlider3.addEventListener('click', function(){
 // ------audio------------
 var buttonSong = document.querySelector('.button')
 var mySong = document.getElementById("song")
-buttonSong.onclick= function(){
-    if(mySong.paused){
+buttonSong.onclick = function () {
+    if (mySong.paused) {
         mySong.play()
     }
 }
